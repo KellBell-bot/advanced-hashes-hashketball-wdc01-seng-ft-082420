@@ -156,11 +156,16 @@ def player_numbers(team_name)
 game_hash.each do |team, team_data|
   if team_data[:team_name]== team_name
     team_data.each do |key, value|
-      binding.pry
-  end
+      if key == :players
+        value.each do |player|
+          numbers_list.push(player[:number])
+        end
+      end
     end
+  end
 end
 end
+
 
 def player_hash
  all_players= game_hash[:home][:players]+ game_hash[:away][:players]
