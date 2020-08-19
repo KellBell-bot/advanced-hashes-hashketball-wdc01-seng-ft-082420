@@ -155,10 +155,10 @@ def player_numbers(team_name)
   numbers_list=[]
 game_hash.each do |team, team_data|
   if team_data[:team_name]== team_name
-    team_data.each do |key, value|
-      if key == :players
-        value.each do |player|
-          numbers_list.push(player[:number])
+    team_data[:players].each do |player|
+      player.each do |key, value|
+        if key == :number
+          numbers_list.push
         end
       end
     end
