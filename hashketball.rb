@@ -159,12 +159,13 @@ game_hash.each do |team, team_data|
       player.each do |key, value|
         binding.pry
         if key == :number
-          numbers_list.push team_data[:players][:number]
+          numbers_list.push value
         end
       end
     end
   end
 end
+numbers_list
 end
 
 
