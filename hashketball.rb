@@ -158,7 +158,7 @@ game_hash.each do |team, team_data|
     team_data[:players].each do |player|
       player.each do |key, value|
         if key == :number
-          numbers_list.push
+          numbers_list.push value
         end
       end
     end
